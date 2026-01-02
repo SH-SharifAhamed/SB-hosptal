@@ -1,0 +1,228 @@
+body {
+     margin: 0;
+     font-family: Arial;
+}
+
+/* ============ Navication Bar ============= */
+
+nav {
+     background: #0a4fa3;
+     padding: 15px 40px;
+     color: white;
+     display: flex;
+     justify-content: space-between;
+}
+
+nav a {
+     color: white;
+     text-decoration: none;
+     cursor: pointer;
+}
+
+nav img {
+     height: 60px;
+}
+
+#nam {
+     margin: 0;
+     font-size: 20px;
+     font-weight: bold;
+}
+
+
+/* ============ Hero section ============= */
+
+.hero {
+     height: 40vh;
+     background: url('Assets/Hero-img .jpeg') center/cover no-repeat;
+     display: flex;
+     align-items: center;
+     padding: 40px;
+     color: white;
+     background-color: rgba(0, 0, 0, 0.4);
+     background-blend-mode: darken;
+}
+
+.btn {
+     background: #0a4fa3;
+     color: white;
+     padding: 10px 20px;
+     border-radius: 6px;
+     cursor: pointer;
+     display: inline-block;
+     margin-top: 10px;
+}
+
+
+/* ======= Top Doctors ========= */
+
+
+.section {
+     padding: 40px;
+}
+
+h2 {
+     text-align: center;
+     margin-bottom: 30px;
+}
+
+.rd {
+     align-items: center;
+     justify-content: center;
+     display: flex;
+     flex-direction: column;
+}
+
+.doctor-card-container {
+     display: flex;
+     gap: 20px;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: center;
+}
+
+.doctor-card {
+     width: 240px;
+     padding: 15px;
+     background: white;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+     border-radius: 10px;
+     position: relative;
+}
+
+.doctor-card img {
+     width: 100%;
+     height: 160px;
+     border-radius: 8px;
+}
+
+.book-btn {
+     background: #0a4fa3;
+     color: white;
+     padding: 8px 12px;
+     border: none;
+     border-radius: 6px;
+     margin-top: 10px;
+     cursor: pointer;
+}
+
+.cancel-btn {
+     background: #e63946;
+     color: white;
+     padding: 8px 12px;
+     border: none;
+     border-radius: 6px;
+     margin-top: 10px;
+     cursor: pointer;
+     display: none;
+}
+ 
+.disabled {
+     background: gray !important;
+     cursor: not-allowed;
+}
+
+
+/* ================ DashBoard Section =================== */
+
+.dashboard {
+     margin-top: 40px;
+     background: #f5f7ff;
+     padding: 20px;
+     border-radius: 10px;
+}
+
+.dashboard h2 {
+     text-align: center;
+     margin-bottom: 20px;
+}
+
+.dashboard-list {
+     max-width: 800px;
+     margin: auto;
+}
+
+.dashboard-item {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 10px;
+     background: white;
+     margin-bottom: 10px;
+     border-radius: 6px;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ======== Bloge Section ======== */
+
+.blog-card {
+     border: 1px solid #ddd;
+     padding: 15px;
+     border-radius: 8px;
+     margin: 20px;
+
+}
+.blog-card-container {
+     margin: 40px;
+     gap: 20px;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: center;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+img {
+     width: 100%;
+     height: 200px;
+     border-radius: 8px;
+     object-fit: cover;
+}
+.blog-card-1 {
+     padding: 15px;
+     background: white;
+     border-radius: 10px;
+     align-items: center;
+     justify-content: center;
+     border: 1px solid #ddd;
+}
+
+h3 {
+     font-size: 20px;
+     text-align: center;
+}
+.blog-card{
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+     background: #f5f7ff;
+     justify-content: center;
+     align-items: center;
+}
+.section .blog-card p {
+     margin-top: 10px;
+     color: #555;
+     text-align: center;
+
+}
+
+/* ========== footer ========= */
+footer {
+     background: #0a4fa3;
+     color: white;
+     padding: 40px 20px;
+     font-family: Arial;
+     align-items: center;
+     justify-content: center;
+}
+.footer {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     max-width: 1200px;
+     margin: auto;
+     align-items: center;
+     justify-content: center;
+}
+.footer-content{
+     text-align: center;
+     align-items: center;
+     justify-content: center;
+}

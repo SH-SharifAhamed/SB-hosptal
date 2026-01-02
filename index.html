@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SB Hospital</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="Assets/nav logo.jpg">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ============== Navication Bar ============= -->
+  <nav>
+    <div>
+      <a href="index.html"><img src="Assets/nav logo.jpg" alt=""/><p id="nam">SB Hospital</p></a>
+      
+      
+    </div>
+    <ul style="display: flex; gap: 20px; list-style: none">
+      <li><a onclick="showView('home')">Home</a></li>
+      <li><a onclick="showView('dashboard')">Dashboard</a></li>
+      <li><a onclick="showView('blog')">Blog</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- ============== Hero Section ============== -->
+
+  <section id="homeView">
+    <section class="hero">
+      <div>
+        <h1 class="text-red-500">South Bengal Hospital.</h1>
+        <p>Book doctors, manage appointments, and track patients.</p>
+        <div class="btn" onclick="openBooking()">Book a Doctor</div>
+      </div>
+    </section>
+
+    <!-- ========== Top Doctors ============= -->
+
+    <section class="section">
+      <h2>Top Doctors</h2>
+      <div class="doctor-card-container" id="doctorCards"></div>
+      <div style="text-align: center; margin-top: 10px">
+        <button class="btn" id="toggleDoctorsBtn" onclick="toggleDoctors()">
+          Show More
+        </button>
+      </div>
+    </section>
+
+    <section class="section rd">
+      <h2>Select Doctor Based on Disease</h2>
+      <select id="diseaseSelect" style="padding: 10px; width: 260px" onchange="filterDoctor()">
+        <option value="">Select Category</option>
+        <option value="Cardiologist">Cardiologist</option>
+        <option value="Neurologist">Neurologist</option>
+        <option value="Skin Specialist">Skin Specialist</option>
+        <option value="Child Specialist">Child Specialist</option>
+        <option value="Diabetologist">Diabetologist</option>
+        <option value="ENT Specialist">ENT Specialist</option>
+        <option value="Eye Specialist">Eye Specialist</option>
+      </select>
+      <div id="diseaseResult" style="margin-top: 20px"></div>
+    </section>
+  </section>
+
+  <section id="dashboardView" style="display: none">
+    <section class="section dashboard">
+      <h2>Booked Doctors Dashboard</h2>
+      <div class="dashboard-list" id="dashboardList"></div>
+    </section>
+  </section>
+
+
+  <!-- ============== Blog ================ -->
+
+
+  <section id="blogView" style="display: none">
+    <section class="section">
+      <h2>South Bengal Hospital Blog</h2>
+      <hr>
+
+      <div class="blog-card-container">
+        <div class="blog-card-1">
+          <img src="Assets/Hospital Interior.jpeg" alt="blog image" />
+          <h3>Hospital Interior</h3>
+          <p>A clean, calm, and well-organized interior designed to ensure patient comfort and efficient healthcare services.</p>
+        </div>
+
+        <div class="blog-card-1">
+          <img src="Assets/OT.jpeg" alt="blog image" />
+          <h3>OT Room</h3>
+          <p>Operation Theatre (OT) is a sterile, well-equipped room where surgical procedures are safely performed by medical professionals.</p>
+        </div>
+        <div class="blog-card-1">
+          <img src="Assets/office.jpeg" alt="blog image" />
+          <h3>Office Room</h3>
+          <p>A professional and well-organized workspace designed to enhance productivity and comfort.</p>
+        </div>
+        <div class="blog-card-1">
+          <img src="Assets/CT Suite.jpeg" alt="blog image" />
+          <h3>CT Scan Room</h3>
+          <p>A specialized room equipped with advanced CT scanning technology for detailed internal imaging.</p>
+        </div>
+        <div class="blog-card-1">
+          <img src="Assets/download (1).jpeg" alt="blog image" />
+          <h3>ICU</h3>
+          <p>Intensive Care Unit (ICU) is a specialized department providing critical care and monitoring for severely ill patients.</p>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <h3>Importance of Regular Checkup</h3>
+        <p>
+          Regular health checkups help in early detection of diseases, and
+          monitoring your health trends.
+        </p>
+      </div>
+      <div class="blog-card">
+        <h3>Healthy Lifestyle Tips</h3>
+        <p>
+          Balanced diet, regular exercise, and mental wellness are key to a
+          healthy life.
+        </p>
+      </div>
+    </section>
+  </section>
+
+
+  <!-- ============== Footer Section ============== -->
+
+
+  <footer>
+    <div class="footer">
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px">
+        <h3 style="margin-bottom: 15px">South Bengal Hospital.</h3>
+        <p class="footer-content">
+          Providing top medical services and patient care across Bangladesh.
+        </p>
+      </div>
+
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px">
+        <h3 style="margin-bottom: 10px">Quick Links</h3>
+        <ul class="footer-content" style="list-style: none; padding: 0">
+          <li>
+            <a href="#" style="color: white; text-decoration: none">Home</a>
+          </li>
+          <li>
+            <a href="#" style="color: white; text-decoration: none">Dashboard</a>
+          </li>
+          <li>
+            <a href="#" style="color: white; text-decoration: none">Blog</a>
+          </li>
+        </ul>
+      </div>
+
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px">
+        <h3 style="margin-bottom: 10px">Contact Info</h3>
+        <div class="footer-content">
+        <p>Email: info@sbhospital.com<br />
+        Phone: +880 1234 567890 <br />
+        Address:
+        Burhanuddin, Bhola</p>
+        </div>
+      </div>
+
+      <div style="flex: 1; min-width: 200px; margin-bottom: 20px">
+        <h3 style="margin-bottom: 10px">Follow Us</h3>
+        <div class="footer-content" style="display: flex; gap: 10px">
+          <a href="https://www.facebook.com/shshorif.ahmed.7" style="color: white; font-size: 20px" target="_blank"><i
+              class="fa-brands fa-square-facebook"></i></a>
+          <a href="https://github.com/SH-SharifAhamed" style="color: white; font-size: 20px" target="_blank"><i
+              class="fa-brands fa-github"></i></a>
+          <a href="#" style="color: white; font-size: 20px"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/shorif-ahamed-951b862a0/" style="color: white; font-size: 20px"
+            target="_blank"><i class="fa-brands fa-linkedin-in"></i></i></a>
+        </div>
+      </div>
+
+    </div>
+    <hr />
+    <div style="text-align: center; margin-top: 30px; font-size: 16px">
+      <p>© 2025 South Bengal Hospital Management | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <!-- Font Awesome CDN for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <script src="script.js"></script>
+</body>
+
+</html>
